@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "xZjmQFTyLm2mWP3DQWKVGVO1rf+96qLRdIIIvGpJHK/IjiuY6LHY4bQ6JYxheDuhYu4RB0vtUVAsiw9hjGcd5A==",
+  "success": true,
+  "projectFilePath": "D:\\shasti\\Sashti.Service\\Sashti.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sanka\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\sanka\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
