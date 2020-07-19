@@ -1,0 +1,6 @@
+D:\shasti\Sashti.Repository\bin\Debug\netstandard2.0\Sashti.Repository.deps.json
+D:\shasti\Sashti.Repository\bin\Debug\netstandard2.0\Sashti.Repository.dll
+D:\shasti\Sashti.Repository\obj\Debug\netstandard2.0\Sashti.Repository.csprojAssemblyReference.cache
+D:\shasti\Sashti.Repository\obj\Debug\netstandard2.0\Sashti.Repository.AssemblyInfoInputs.cache
+D:\shasti\Sashti.Repository\obj\Debug\netstandard2.0\Sashti.Repository.AssemblyInfo.cs
+D:\shasti\Sashti.Repository\bin\Debug\netstandard2.0\Sashti.Model.dll

@@ -4,14 +4,14 @@
     "D:\\shasti\\Sashti.Repository\\Sashti.Repository.csproj": {}
   },
   "projects": {
-    "D:\\shasti\\Sashti.Repository\\Sashti.Repository.csproj": {
+    "D:\\shasti\\Sashti.Model\\Sashti.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\shasti\\Sashti.Repository\\Sashti.Repository.csproj",
-        "projectName": "Sashti.Repository",
-        "projectPath": "D:\\shasti\\Sashti.Repository\\Sashti.Repository.csproj",
+        "projectUniqueName": "D:\\shasti\\Sashti.Model\\Sashti.Model.csproj",
+        "projectName": "Sashti.Model",
+        "projectPath": "D:\\shasti\\Sashti.Model\\Sashti.Model.csproj",
         "packagesPath": "C:\\Users\\sanka\\.nuget\\packages\\",
-        "outputPath": "D:\\shasti\\Sashti.Repository\\obj\\",
+        "outputPath": "D:\\shasti\\Sashti.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -47,6 +47,81 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\shasti\\Sashti.Repository\\Sashti.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\shasti\\Sashti.Repository\\Sashti.Repository.csproj",
+        "projectName": "Sashti.Repository",
+        "projectPath": "D:\\shasti\\Sashti.Repository\\Sashti.Repository.csproj",
+        "packagesPath": "C:\\Users\\sanka\\.nuget\\packages\\",
+        "outputPath": "D:\\shasti\\Sashti.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sanka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\shasti\\Sashti.Model\\Sashti.Model.csproj": {
+                "projectPath": "D:\\shasti\\Sashti.Model\\Sashti.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
             }
           },
           "imports": [

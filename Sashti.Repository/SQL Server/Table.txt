@@ -1,0 +1,211 @@
+﻿create table SashtiDepartment
+(
+Id int identity(1,1),
+RowID int NULL,
+Dept_ID AS ('Dept_'+right('0000000'+CONVERT([varchar](7),[RowID],(0)),(7))) PERSISTED NOT NULL primary key,
+Department varchar(150),
+CreateDate datetime,
+ModifiedDate datetime,
+RegisterID varchar(150),
+LoginID varchar(150)
+)
+
+--------------------------------------------------------------------------------------------------------
+
+create table SashtiJobTitle
+(
+Id int identity(1,1),
+RowId int,
+JobId AS ('JobId_'+right('0000000'+CONVERT([varchar](7),[RowID],(0)),(7))) PERSISTED NOT NULL Primary Key,
+JobTitle varchar(150),
+MinSalary int,
+MaxSalary int,
+Createdate datetime,
+Modifieddate datetime,
+RegisterId varchar(150),
+LoginID varchar(150)
+)
+
+------------------------------------------------------------------------------------------------------
+
+create table SashtiEmployeeMaster
+(
+Id int identity(1,1),
+RowID int NULL,
+EmpID AS ('ilss_'+right('0000000'+CONVERT([varchar](7),[RowID],(0)),(7))) PERSISTED NOT NULL Primary key,
+FirstName varchar(150),
+LastName varchar(150),
+MiddleName varchar(150),
+Gender varchar(10),
+Email varchar(150),
+MobileNo varchar(15),
+DateofJoin datetime,
+createdate datetime,
+modifieddate datetime,
+RegisterId varchar(150),
+LoginID varchar(150)
+)
+
+-----------------------------------------------------------------------------------------------------------
+
+create table SashtiCountry
+(
+id int identity(1,1),
+rowid int,
+CountryID  AS ('CountryID_'+right('0000000'+CONVERT([varchar](7),[RowID],(0)),(7))) PERSISTED NOT NULL primary key,
+Country varchar(150),
+IsStatus int,
+CreateDate datetime NULL,
+ModifiedDate datetime NULL,
+LoginDetails varchar(256) NULL,
+Registerid varchar(256) NULL
+)
+
+-----------------------------------------------------------------------------------------------------------
+
+create table SashtiState
+(
+ID int IDENTITY(1,1) NOT NULL,
+RowID int NULL,
+StateID  AS ('StateID_'+right('0000000'+CONVERT([varchar](7),[RowID],(0)),(7))) PERSISTED NOT NULL primary key,
+CountryID varchar(17) FOREIGN KEY REFERENCES SashtiCountry(CountryID),
+StateName varchar(150),
+IsStatus int,
+CreateDate datetime NULL,
+ModifiedDate datetime NULL,
+LoginDetails varchar(256) NULL,
+Registerid varchar(256) NULL
+)
+
+--------------------------------------------------------------------------------------------------------------
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [IlssDbUser].[SashtiCity](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[RowID] [int] NULL,
+	[CityID]  AS ('CityID_'+right('0000000'+CONVERT([varchar](7),[RowID],(0)),(7))) PERSISTED NOT NULL,
+	[CountryID] [varchar](17) NULL,
+	[StateID] [varchar](15) NULL,
+	[CityName] [varchar](150) NULL,
+	[IsStatus] [int] NULL,
+	[CreateDate] [datetime] NULL,
+	[ModifiedDate] [datetime] NULL,
+	[LoginDetails] [varchar](256) NULL,
+	[Registerid] [varchar](256) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[CityID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [IlssDbUser].[SashtiCity]  WITH CHECK ADD FOREIGN KEY([CountryID])
+REFERENCES [IlssDbUser].[SashtiCountry] ([CountryID])
+GO
+
+ALTER TABLE [IlssDbUser].[SashtiCity]  WITH CHECK ADD FOREIGN KEY([StateID])
+REFERENCES [IlssDbUser].[SashtiState] ([StateID])
+GO
+
+-----------------------------------------------------------------------------------------------------
+
+create table sashtiemployeedepents
+(
+id int identity(1,1),
+rowid int,
+empdep AS ('Empdep_'+right('0000000'+CONVERT([varchar](7),[RowID],(0)),(7))) PERSISTED primary key NOT NULL,
+Empid varchar(12) FOREIGN KEY REFERENCES SashtiEmployeeMaster(Empid),
+Names varchar(150),
+Relationship varchar(150),
+DOB date,
+Age int,
+IsStatus int,
+CreateDate datetime NULL,
+ModifiedDate datetime NULL,
+LoginDetails varchar(256) NULL,
+Registerid varchar(256) NULL
+)
+
+---------------------------------------------------------------------------------------------------------------
+
+create table sashtiemployeeExperience
+(
+id int identity(1,1),
+rowid int,
+empexp AS ('Empexp_'+right('0000000'+CONVERT([varchar](7),[RowID],(0)),(7))) PERSISTED primary key NOT NULL,
+Empid varchar(12) FOREIGN KEY REFERENCES SashtiEmployeeMaster(Empid),
+CompanyName varchar(250),
+DateofJoining date,
+LastWorkingDate date,
+Duration int,
+IsStatus int,
+CreateDate datetime NULL,
+ModifiedDate datetime NULL,
+LoginDetails varchar(256) NULL,
+Registerid varchar(256) NULL
+)
+
+-------------------------------------------------------------------------------------------------------------
+
+create table sashtiemployeeEducation
+(
+id int identity(1,1),
+rowid int,
+empexp AS ('Empedu_'+right('0000000'+CONVERT([varchar](7),[RowID],(0)),(7))) PERSISTED primary key NOT NULL,
+Empid varchar(12) FOREIGN KEY REFERENCES SashtiEmployeeMaster(Empid),
+InstituteName varchar(250),
+University varchar(250),
+Board varchar(150),
+Percent_CGPA decimal(10,2),
+YearofPassing int,
+IsStatus int,
+CreateDate datetime NULL,
+ModifiedDate datetime NULL,
+LoginDetails varchar(256) NULL,
+Registerid varchar(256) NULL
+)
+
+----------------------------------------------------------------------------------------------------------------
+
+create table sashtiemployeesalaryhistory
+(
+id int identity(1,1),
+rowid int,
+empexp AS ('Empsal_'+right('0000000'+CONVERT([varchar](7),[RowID],(0)),(7))) PERSISTED primary key NOT NULL,
+Empid varchar(12) FOREIGN KEY REFERENCES SashtiEmployeeMaster(Empid),
+jobid varchar(13) FOREIGN KEY REFERENCES SashtiJobTitle(jobid),
+Dept_ID varchar(12) FOREIGN KEY REFERENCES SashtiDepartment(Dept_ID),
+salary decimal(15,2),
+fromdate datetime,
+todate datetime,
+IsStatus int,
+CreateDate datetime NULL,
+ModifiedDate datetime NULL,
+LoginDetails varchar(256) NULL,
+Registerid varchar(256) NULL
+)
+
+----------------------------------------------------------------------------------------------------------------
+
+create table sashtiemployeeBankDetails
+(
+id int identity(1,1),
+rowid int,
+empBank AS ('Empbnk_'+right('0000000'+CONVERT([varchar](7),[RowID],(0)),(7))) PERSISTED primary key NOT NULL,
+Empid varchar(12) FOREIGN KEY REFERENCES SashtiEmployeeMaster(Empid),
+AccountNo varchar(100),
+IFSCCode varchar(100),
+BankName varchar(250),
+AccountName varchar(150),
+AccountType varchar(150),
+IsStatus int,
+CreateDate datetime NULL,
+ModifiedDate datetime NULL,
+LoginDetails varchar(256) NULL,
+Registerid varchar(256) NULL
+)

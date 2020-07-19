@@ -1,0 +1,90 @@
+﻿create proc USPInsertEmployeeMaster
+@FirstName varchar(150),
+@LastName varchar(150),
+@MiddleName varchar(150),
+@Gender varchar(10),
+@Email varchar(150),
+@MobileNo varchar(15),
+@DateofBirth datetime,
+@DateofJoin datetime,
+@RegisterId varchar(150)='0',
+@LoginID varchar(150)='0'
+as
+begin
+declare @rowid int,@scopeidentity int = 0 
+	select @rowid = max(rowid) + 1 from SashtiEmployeeMaster
+	if isnull(@rowid,0)=0
+	set @rowid = 1
+
+if not exists (select *  from SashtiEmployeeMaster as t where Mobileno=@Mobileno)
+begin
+
+insert into SashtiEmployeeMaster(RowID,FirstName,LastName,MiddleName,Gender,Email,MobileNo,DateofJoin,createdate,RegisterId,LoginID,IsStatus,DateofBirth)
+values
+(@rowid,@FirstName,@LastName,@MiddleName,@Gender,@Email,@MobileNo,@DateofJoin,GETDATE(),@RegisterId,@LoginID,1,@DateofBirth)
+
+
+set @scopeidentity = scope_identity() 
+
+select EmpID from SashtiEmployeeMaster where id = @scopeidentity 
+end
+end
+	
+--------------------------------------------------------------------------------------------------------------------
+
+create proc USPInsertEmpBank
+@EmpID varchar(12),
+@AccountNo varchar(75),
+@IFSCCode varchar(75),
+@BankName varchar(150),
+@AccountName varchar(150),
+@AccountType varchar(150),
+@RegisterId varchar(150)='0',
+@LoginID varchar(150)='0'
+as
+begin
+
+declare @rowid int,@scopeidentity int = 0 
+	select @rowid = max(rowid) + 1 from sashtiemployeeBankDetails
+	if isnull(@rowid,0)=0
+	set @rowid = 1
+
+	if not exists (select *  from sashtiemployeeBankDetails as t where AccountNo=@AccountNo and IFSCCode=@IFSCCode) 
+	begin
+
+	insert into sashtiemployeeBankDetails(rowid,empid,accountno,ifsccode,bankname,accountname,isstatus,createdate,logindetails,registerid) values
+	(@rowid,@empid,@accountno,@ifsccode,@bankname,@accountname,1,Getdate(),@LoginID,@RegisterId)
+
+	set @scopeidentity = scope_identity() 
+
+select empbank from sashtiemployeeBankDetails where id = @scopeidentity 
+
+	end
+
+
+end
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+create proc USPInsertEmpSalaryHistory
+@empid varchar(12),
+@JobId varchar(15),
+@Dept_Id varchar(15),
+@fromdate datetime,
+@todate datetime,
+@RegisterId varchar(150)='0',
+@LoginID varchar(150)='0'
+as
+begin
+
+declare @rowid int,@scopeidentity int = 0 
+	select @rowid = max(rowid) + 1 from sashtiemployeesalaryhistory
+	if isnull(@rowid,0)=0
+	set @rowid = 1
+
+insert into sashtiemployeesalaryhistory(rowid,empid,jobid,dept_id,fromdate,todate,isstatus,createdate,logindetails,registerid) values
+(@rowid,@empid,@jobid,@dept_id,@fromdate,@todate,1,getdate(),@LoginID,@RegisterId)
+
+end
+
