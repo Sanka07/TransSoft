@@ -1,0 +1,9 @@
+D:\shasti\Sashti.Service\bin\Debug\netstandard2.0\Sashti.Service.deps.json
+D:\shasti\Sashti.Service\bin\Debug\netstandard2.0\Sashti.Service.dll
+D:\shasti\Sashti.Service\bin\Debug\netstandard2.0\Sashti.Service.pdb
+D:\shasti\Sashti.Service\obj\Debug\netstandard2.0\Sashti.Service.csprojAssemblyReference.cache
+D:\shasti\Sashti.Service\obj\Debug\netstandard2.0\Sashti.Service.AssemblyInfoInputs.cache
+D:\shasti\Sashti.Service\obj\Debug\netstandard2.0\Sashti.Service.AssemblyInfo.cs
+D:\shasti\Sashti.Service\obj\Debug\netstandard2.0\Sashti.Service.csproj.CoreCompileInputs.cache
+D:\shasti\Sashti.Service\obj\Debug\netstandard2.0\Sashti.Service.dll
+D:\shasti\Sashti.Service\obj\Debug\netstandard2.0\Sashti.Service.pdb

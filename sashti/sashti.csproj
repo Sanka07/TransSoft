@@ -193,4 +193,8 @@
     <None Include="wwwroot\vendors\parsleyjs\bower_components\uwidget\uwidget.less" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+  </ItemGroup>
+
 </Project>

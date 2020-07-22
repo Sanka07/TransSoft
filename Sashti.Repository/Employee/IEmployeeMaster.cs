@@ -9,5 +9,6 @@ namespace Sashti.Repository.Employee
 	public interface IEmployeeMaster
 	{
 		Task<string> SaveEmployee(EmployeeRequest request);
+		Task<List<EmployeeResponse>> GetEmployees();
 	}
 }

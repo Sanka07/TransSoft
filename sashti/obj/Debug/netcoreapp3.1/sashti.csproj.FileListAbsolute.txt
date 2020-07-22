@@ -12,8 +12,6 @@ D:\shasti\sashti\bin\Debug\netcoreapp3.1\sashti.Views.pdb
 D:\shasti\sashti\obj\Debug\netcoreapp3.1\sashti.csprojAssemblyReference.cache
 D:\shasti\sashti\obj\Debug\netcoreapp3.1\sashti.AssemblyInfoInputs.cache
 D:\shasti\sashti\obj\Debug\netcoreapp3.1\sashti.AssemblyInfo.cs
-D:\shasti\sashti\obj\Debug\netcoreapp3.1\sashti.csproj.CoreCompileInputs.cache
-D:\shasti\sashti\obj\Debug\netcoreapp3.1\sashti.MvcApplicationPartsAssemblyInfo.cache
 D:\shasti\sashti\obj\Debug\netcoreapp3.1\sashti.RazorAssemblyInfo.cache
 D:\shasti\sashti\obj\Debug\netcoreapp3.1\sashti.RazorAssemblyInfo.cs
 D:\shasti\sashti\obj\Debug\netcoreapp3.1\sashti.TagHelpers.input.cache
@@ -39,3 +37,11 @@ D:\shasti\sashti\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_menu.cshtml.g.cs
 D:\shasti\sashti\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_footer.cshtml.g.cs
 D:\shasti\sashti\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Index.cshtml.g.cs
 D:\shasti\sashti\obj\Debug\netcoreapp3.1\Razor\Views\AddEmployee\Index.cshtml.g.cs
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\shasti\sashti\obj\Debug\netcoreapp3.1\sashti.csproj.CoreCompileInputs.cache
+D:\shasti\sashti\obj\Debug\netcoreapp3.1\sashti.MvcApplicationPartsAssemblyInfo.cache

@@ -88,3 +88,11 @@ insert into sashtiemployeesalaryhistory(rowid,empid,jobid,dept_id,fromdate,todat
 
 end
 
+----------------------------------------------------------------------
+
+
+Create proc USPGetEmployeeMaster
+as
+begin
+select EmpID,FirstName,LastName,Email,MobileNo from SashtiEmployeeMaster(nolock) where IsStatus=1
+end
