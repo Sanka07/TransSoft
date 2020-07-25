@@ -96,3 +96,45 @@ as
 begin
 select EmpID,FirstName,LastName,Email,MobileNo from SashtiEmployeeMaster(nolock) where IsStatus=1
 end
+
+-----------------------------------------------------------------------
+
+create proc USPGetJobTitle
+@registerid varchar(150)='0',
+@loginid varchar(150)='0'
+as
+begin
+select jobid,jobtitle from SashtiJobTitle nolock where IsStatus=1 and LoginID=@loginid and RegisterId=@registerid
+end
+
+-----------------------------------------------------------------------
+
+create proc USPInsertSalaryHistory
+@empid varchar(14),
+@jobid varchar(14),
+@dept_id varchar(14),
+@registerid varchar(150)='0',
+@loginid varchar(150)='0'
+as
+begin
+insert into sashtiemployeesalaryhistory(Empid,jobid,dept_id,salary,isstatus,createdate,logindetails,registerid)
+values(@empid,@jobid,@dept_id,0,1,getdate(),@loginid,@registerid)
+end
+
+---------------------------------------------------------------------
+
+create proc USPInsertEmployeeBank
+@empid varchar(14),
+@accountno varchar(25),
+@ifsccode varchar(20),
+@bankname varchar(150),
+@accountname varchar(80),
+@accounttype varchar(50),
+@registerid varchar(150)='0',
+@loginid varchar(150)='0'
+as
+begin
+
+insert into sashtiemployeeBankDetails(empid,accountno,ifsccode,bankname,accountname,accounttype,isstatus,createdate,logindetails,registerid) 
+values(@empid,@accountno,@ifsccode,@bankname,@accountname,@accounttype,1,getdate(),@loginid,@registerid)
+end

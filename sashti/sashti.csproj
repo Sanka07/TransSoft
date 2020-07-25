@@ -197,4 +197,10 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Sashti.Model\Sashti.Model.csproj" />
+    <ProjectReference Include="..\Sashti.Repository\Sashti.Repository.csproj" />
+    <ProjectReference Include="..\Sashti.Service\Sashti.Service.csproj" />
+  </ItemGroup>
+
 </Project>

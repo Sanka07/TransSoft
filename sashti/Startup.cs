@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Sashti.Repository.Employee;
+using Sashti.Service.Employee;
 
 namespace sashti
 {
@@ -26,10 +28,15 @@ namespace sashti
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.AddControllersWithViews();
+			
+			services.AddTransient<IEmployeeService, EmployeeService>();
+			services.AddTransient<IEmployeeMaster, EmployeeMaster>();
 
 			services.AddTransient<IDbConnection>(
 				(sp) =>new SqlConnection(this.Configuration.GetConnectionString("sashti"))
 				);
+
+			
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,6 +65,8 @@ namespace sashti
 					name: "default",
 					pattern: "{controller=Home}/{action=Index}/{id?}");
 			});
+
+			
 		}
 	}
 }

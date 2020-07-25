@@ -45,3 +45,13 @@ D:\shasti\sashti\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.
 D:\shasti\sashti\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\shasti\sashti\obj\Debug\netcoreapp3.1\sashti.csproj.CoreCompileInputs.cache
 D:\shasti\sashti\obj\Debug\netcoreapp3.1\sashti.MvcApplicationPartsAssemblyInfo.cache
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\Dapper.dll
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\Sashti.Model.dll
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\Sashti.Repository.dll
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\Sashti.Service.dll
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\Sashti.Model.pdb
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\Sashti.Service.pdb
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\Sashti.Repository.pdb
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\Unity.Abstractions.dll
+D:\shasti\sashti\bin\Debug\netcoreapp3.1\Unity.Container.dll

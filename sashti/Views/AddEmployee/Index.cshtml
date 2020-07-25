@@ -80,13 +80,148 @@
 
 						</ul>
 						<div id="step-1">
-							asdf
+							<form class="form-horizontal form-label-left" id="frmEmployeeMaster">
+								<div class="form-group  row">
+									<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">
+										First Name <span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6 ">
+										<input type="text" id="first-name" required="required" class="form-control">
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+								<div class="form-group row">
+									<label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">Middle Name</label>
+									<div class="col-md-6 col-sm-6 ">
+										<input id="middle-name" class="form-control col" type="text" name="middle-name">
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+								<div class="form-group row">
+									<label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+										Father Name<span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6 ">
+										<input type="text" id="last-name" name="last-name" required="required" class="form-control ">
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+								<div class="form-group row">
+									<label class="col-form-label col-md-3 col-sm-3 label-align">Gender</label>
+									<div class="col-md-6 col-sm-6 ">
+										<div id="gender" class="btn-group" data-toggle="buttons">
+											<label class="btn btn-secondary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-secondary">
+												<input type="radio" name="gender" value="male" class="join-btn"> &nbsp; Male &nbsp;
+											</label>
+											<label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-secondary">
+												<input type="radio" name="gender" value="female" class="join-btn"> Female
+											</label>
+										</div>
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+								<div class="form-group row">
+									<label class="col-form-label col-md-3 col-sm-3 label-align">
+										Date Of Birth <span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6 ">
+										@*<input id="birthday" class="date-picker form-control" required="required" type="text">*@
+										<input class="form-control date" type="date" name="date" required='required'>
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+								<div class="form-group row">
+									<label class="col-form-label col-md-3 col-sm-3  label-align">
+										Date of Join<span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6">
+										<input class="form-control date" type="date" name="date" required='required'>
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+							</form>
 						</div>
 						<div id="step-2">
-							werwer
+							<form class="form-horizontal form-label-left" id="frmEmployeeJobdetail">
+								<div class="form-group row">
+									<label class="col-form-label col-md-3 col-sm-3  label-align">
+										Department<span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6">
+										<select class="form-control" required='required'>
+											<option value="">Select Department</option>
+										</select>
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-form-label col-md-3 col-sm-3  label-align">
+										Job Title<span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6">
+										<select class="form-control" required='required'>
+											<option value="">Select Job Title</option>
+										</select>
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+							</form>
 						</div>
 						<div id="step-3">
-							hjkl
+							<form class="form-horizontal form-label-left" id="frmEmployeeBank">
+								<div class="form-group row">
+									<label class="col-form-label col-md-3 col-sm-3  label-align">
+										Account Name<span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6">
+										<input type="text" id="first-name" required="required" class="form-control">
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+								<div class="form-group row">
+									<label class="col-form-label col-md-3 col-sm-3  label-align">
+										Account No<span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6">
+										<input type="text" id="first-name" required="required" class="form-control">
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+								<div class="form-group row">
+									<label class="col-form-label col-md-3 col-sm-3  label-align">
+										IFSC Code<span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6">
+										<input type="text" id="first-name" required="required" class="form-control">
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-form-label col-md-3 col-sm-3  label-align">
+										Account Type<span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6">
+										<select class="form-control" required='required'>
+											<option value="">Select Account Type</option>
+											<option value="Saving">Saving</option>
+											<option value="Current">Current</option>
+										</select>
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+
+								<div class="form-group row">
+									<label class="col-form-label col-md-3 col-sm-3  label-align">
+										Bank Name<span class="required">*</span>
+									</label>
+									<div class="col-md-6 col-sm-6">
+										<input type="text" id="first-name" required="required" class="form-control">
+									</div>
+									<div class="alert text-hide"></div>
+								</div>
+							</form>
 						</div>
 
 					</div>
