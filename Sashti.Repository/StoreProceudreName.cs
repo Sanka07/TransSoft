@@ -6,6 +6,9 @@ namespace Sashti.Repository
 {
 	public static class StoreProceudreName
 	{
+		//Employee
 		public const string GetEmployee = "USPGetEmployeeMaster";
+		public const string GetJobTitle = "USPGetJobTitle";
+		public const string GetDepartment = "USPGetDepartment";
 	}
 }

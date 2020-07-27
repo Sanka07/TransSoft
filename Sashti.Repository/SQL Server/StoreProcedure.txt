@@ -138,3 +138,13 @@ begin
 insert into sashtiemployeeBankDetails(empid,accountno,ifsccode,bankname,accountname,accounttype,isstatus,createdate,logindetails,registerid) 
 values(@empid,@accountno,@ifsccode,@bankname,@accountname,@accounttype,1,getdate(),@loginid,@registerid)
 end
+
+---------------------------------------------------------------------------
+
+create proc USPGetDepartment  
+@registerid varchar(150)='0',  
+@loginid varchar(150)='0'  
+as  
+begin  
+select dept_id,department from SashtiDepartment nolock where IsStatus=1 and LoginID=@loginid and RegisterId=@registerid  
+end

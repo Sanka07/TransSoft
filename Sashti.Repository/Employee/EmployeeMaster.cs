@@ -22,19 +22,54 @@ namespace Sashti.Repository.Employee
 		async Task<List<EmployeeResponse>> IEmployeeMaster.GetEmployees()
 		{
 			List<EmployeeResponse> Response = new List<EmployeeResponse>();
-
 			try
 			{
 				using (var con=new SqlConnection(_dbconnection.ConnectionString))
 				{
 					var GetEmpParam = new DynamicParameters();
-
 					var EmpResponse =await con.QueryAsync<EmployeeResponse>(StoreProceudreName.GetEmployee, GetEmpParam, commandType: CommandType.StoredProcedure);
-
 					Response = EmpResponse.ToList();
 				}
 			}
 			catch(Exception ex)
+			{
+
+			}
+			return Response;
+		}
+
+		async Task<List<JobTitleResponse>> IEmployeeMaster.GetJobTitle()
+		{
+			List<JobTitleResponse> Response = new List<JobTitleResponse>();
+			try
+			{
+				using (var con = new SqlConnection(_dbconnection.ConnectionString))
+				{
+					var GetJobParam = new DynamicParameters();
+					var JobResponses = await con.QueryAsync<JobTitleResponse>(StoreProceudreName.GetJobTitle, GetJobParam, commandType: CommandType.StoredProcedure);
+					Response = JobResponses.ToList();
+				}
+			}
+			catch (Exception ex)
+			{
+
+			}
+			return Response;
+		}
+
+		async Task<List<DepartmentResponse>> IEmployeeMaster.GetDepartment()
+		{
+			List<DepartmentResponse> Response = new List<DepartmentResponse>();
+			try
+			{
+				using (var con = new SqlConnection(_dbconnection.ConnectionString))
+				{
+					var GetJobParam = new DynamicParameters();
+					var DeptResponse = await con.QueryAsync<DepartmentResponse>(StoreProceudreName.GetDepartment, GetJobParam, commandType: CommandType.StoredProcedure);
+					Response = DeptResponse.ToList();
+				}
+			}
+			catch (Exception ex)
 			{
 
 			}
@@ -59,18 +94,13 @@ namespace Sashti.Repository.Employee
 				EmployeeParam.Add("@LoginID", Request.LoginID);
 
 				using (_dbconnection)
-				{
-
-				}
+				{}
 
 			}
 			catch (Exception ex)
 			{
 
 			}
-
-
-
 			return Response;
 		}
 	}

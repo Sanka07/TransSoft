@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Sashti.Model.Employee;
 
 namespace Sashti.Service.Employee
 {
@@ -15,9 +16,19 @@ namespace Sashti.Service.Employee
 			_employeeMaster = employeeMaster;
 		}
 
-		async Task<List<Model.Employee.EmployeeResponse>> IEmployeeService.GetEmployees()
+		async Task<List<EmployeeResponse>> IEmployeeService.GetEmployees()
 		{
 			return await _employeeMaster.GetEmployees();
+		}
+
+		async Task<List<JobTitleResponse>> IEmployeeService.GetJobTitle()
+		{
+			return await _employeeMaster.GetJobTitle();
+		}
+
+		async Task<List<DepartmentResponse>> IEmployeeService.GetDepartment()
+		{
+			return await _employeeMaster.GetDepartment();
 		}
 	}
 }

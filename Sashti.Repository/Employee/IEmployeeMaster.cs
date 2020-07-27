@@ -10,5 +10,8 @@ namespace Sashti.Repository.Employee
 	{
 		Task<string> SaveEmployee(EmployeeRequest request);
 		Task<List<EmployeeResponse>> GetEmployees();
+		Task<List<JobTitleResponse>> GetJobTitle();
+		Task<List<DepartmentResponse>> GetDepartment();
+
 	}
 }

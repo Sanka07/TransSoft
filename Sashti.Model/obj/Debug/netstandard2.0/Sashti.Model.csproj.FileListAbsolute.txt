@@ -1,9 +1,9 @@
 D:\shasti\Sashti.Model\bin\Debug\netstandard2.0\Sashti.Model.deps.json
 D:\shasti\Sashti.Model\bin\Debug\netstandard2.0\Sashti.Model.dll
 D:\shasti\Sashti.Model\bin\Debug\netstandard2.0\Sashti.Model.pdb
+D:\shasti\Sashti.Model\obj\Debug\netstandard2.0\Sashti.Model.csprojAssemblyReference.cache
 D:\shasti\Sashti.Model\obj\Debug\netstandard2.0\Sashti.Model.AssemblyInfoInputs.cache
 D:\shasti\Sashti.Model\obj\Debug\netstandard2.0\Sashti.Model.AssemblyInfo.cs
 D:\shasti\Sashti.Model\obj\Debug\netstandard2.0\Sashti.Model.csproj.CoreCompileInputs.cache
 D:\shasti\Sashti.Model\obj\Debug\netstandard2.0\Sashti.Model.dll
 D:\shasti\Sashti.Model\obj\Debug\netstandard2.0\Sashti.Model.pdb
-D:\shasti\Sashti.Model\obj\Debug\netstandard2.0\Sashti.Model.csprojAssemblyReference.cache

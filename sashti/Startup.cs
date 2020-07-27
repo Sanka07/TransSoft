@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using sashti.Controllers.Common;
 using Sashti.Repository.Employee;
 using Sashti.Service.Employee;
 
@@ -31,6 +32,7 @@ namespace sashti
 			
 			services.AddTransient<IEmployeeService, EmployeeService>();
 			services.AddTransient<IEmployeeMaster, EmployeeMaster>();
+			services.AddTransient<IViewRenderService, ViewRenderService>();
 
 			services.AddTransient<IDbConnection>(
 				(sp) =>new SqlConnection(this.Configuration.GetConnectionString("sashti"))
